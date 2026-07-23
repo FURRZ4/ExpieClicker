@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://d3g4tbol3yeq0"]
+
+[ext_resource type="Script" uid="uid://bemuc6nfdsuu0" path="res://control.gd" id="1_glv2v"]
+[ext_resource type="Texture2D" uid="uid://ds74qg6fockrg" path="res://me.png" id="2_uu6xs"]
+[ext_resource type="Texture2D" uid="uid://bvvpgwmm3y4k3" path="res://madmik.png" id="3_r0du0"]
+
+[sub_resource type="GDScript" id="GDScript_uu6xs"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_buy_button_01_pressed() -> void:
+	pass # Replace with function body.
+"
+
+[node name="Node2D" type="Node2D" unique_id=620831699]
+script = SubResource("GDScript_uu6xs")
+
+[node name="Control" type="Control" parent="." unique_id=128546294]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_glv2v")
+
+[node name="Control" type="Control" parent="Control" unique_id=343845521]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CountLabel2" type="Label" parent="Control/Control" unique_id=1906086753]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 280.0
+offset_right = 680.0
+offset_bottom = 303.0
+
+[node name="ClickButton2" type="Button" parent="Control/Control" unique_id=521525065]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 280.0
+offset_right = 625.0
+offset_bottom = 311.0
+disabled = true
+text = "Build milky!"
+
+[node name="ExpeditionButton2" type="Button" parent="Control/Control" unique_id=1121057769]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 232.0
+offset_right = 645.0
+offset_bottom = 263.0
+disabled = true
+text = "Send Expedition"
+
+[node name="HireButton02" type="Button" parent="Control/Control" unique_id=1997173617]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 184.0
+offset_right = 630.0
+offset_bottom = 215.0
+disabled = true
+text = "Hire scientist"
+
+[node name="CountLabel" type="Label" parent="Control" unique_id=121179045]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 280.0
+offset_right = 296.0
+offset_bottom = 303.0
+
+[node name="MoneyLabel" type="Label" parent="Control" unique_id=846730806]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 16.0
+offset_right = 408.0
+offset_bottom = 47.0
+
+[node name="ClickButton" type="Button" parent="Control" unique_id=1492706089]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 279.0
+offset_right = 242.0
+offset_bottom = 310.0
+text = "Build expie!"
+
+[node name="HireButton01" type="Button" parent="Control" unique_id=38739764]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 184.0
+offset_right = 246.0
+offset_bottom = 215.0
+text = "Hire scientist"
+
+[node name="ExpeditionButton" type="Button" parent="Control" unique_id=892930008]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 232.0
+offset_right = 261.0
+offset_bottom = 263.0
+text = "Send Expedition"
+
+[node name="MilkUnlock" type="Button" parent="Control" unique_id=1734777215]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 240.0
+offset_right = 450.0
+offset_bottom = 271.0
+text = "Unlock Milkies!!"
+
+[node name="SituationMessage" type="Label" parent="Control" unique_id=102847619]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 120.0
+offset_right = 192.0
+offset_bottom = 143.0
+text = "Last message here!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Control" unique_id=1759679741]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 216.0
+offset_right = 433.0
+offset_bottom = 239.0
+text = "200 money:"
+
+[node name="AutoTimer1" type="Timer" parent="Control" unique_id=284447278]
+wait_time = 0.75
+
+[node name="AutoTimer2" type="Timer" parent="Control" unique_id=261129683]
+
+[node name="Coop" type="Control" parent="Control" unique_id=1645250890]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CoopPanel" type="Button" parent="Control/Coop" unique_id=186077933]
+layout_mode = 0
+offset_left = 296.0
+offset_top = 64.0
+offset_right = 470.0
+offset_bottom = 95.0
+text = "Expeditions together!"
+
+[node name="CoopContainer" type="VBoxContainer" parent="Control/Coop" unique_id=1841978492]
+visible = false
+layout_mode = 0
+offset_left = 280.0
+offset_top = 104.0
+offset_right = 482.0
+offset_bottom = 170.0
+
+[node name="CoopExp1" type="Button" parent="Control/Coop/CoopContainer" unique_id=2016165080]
+layout_mode = 2
+text = "Cooperative expedition 1:
+	50 milkies and 50 expies"
+
+[node name="CoopExp2" type="Button" parent="Control/Coop/CoopContainer" unique_id=400705918]
+layout_mode = 2
+text = "Cooperative expedition 2:
+100 milkies and 100 expies"
+
+[node name="ConfusedExpie" type="Sprite2D" parent="." unique_id=2041737595]
+position = Vector2(192, 420)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_uu6xs")
+
+[node name="MadMilk" type="Sprite2D" parent="." unique_id=2099417747]
+position = Vector2(576, 423.99997)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("3_r0du0")
+
+[connection signal="pressed" from="Control/Control/ClickButton2" to="Control" method="_on_click_button_pressed2"]
+[connection signal="pressed" from="Control/Control/ExpeditionButton2" to="Control" method="_on_expedition_button_pressed2"]
+[connection signal="pressed" from="Control/Control/HireButton02" to="Control" method="_on_hire_button01_pressed2"]
+[connection signal="pressed" from="Control/ClickButton" to="Control" method="_on_click_button_pressed"]
+[connection signal="pressed" from="Control/HireButton01" to="Control" method="_on_hire_button01_pressed"]
+[connection signal="pressed" from="Control/ExpeditionButton" to="Control" method="_on_expedition_button_pressed"]
+[connection signal="pressed" from="Control/MilkUnlock" to="Control" method="_on_milk_unlock_pressed"]
+[connection signal="timeout" from="Control/AutoTimer1" to="Control" method="_on_auto_timer01_timeout"]
+[connection signal="timeout" from="Control/AutoTimer2" to="Control" method="_on_auto_timer02_timeout"]
+[connection signal="pressed" from="Control/Coop/CoopPanel" to="Control" method="open_coop_container"]
+[connection signal="pressed" from="Control/Coop/CoopContainer/CoopExp1" to="Control" method="coop_exp_01"]
+[connection signal="pressed" from="Control/Coop/CoopContainer/CoopExp2" to="Control" method="coop_exp_02"]
