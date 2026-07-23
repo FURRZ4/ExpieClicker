@@ -104,10 +104,10 @@ func _on_expedition_button_pressed2() -> void:
 	var roll2: float = randf()
 	if roll2 < 0.70:
 		milkies -= 25
-		money += 20
+		money += 30
 	elif roll2 < 0.90:
 		milkies -= 50
-		money += 20
+		money += 30
 	else:
 		milkies -= 50
 	_update_ui()
@@ -121,7 +121,7 @@ func open_coop_container() -> void:
 	coop_container.visible = not coop_container.visible
 
 func coop_exp_01() -> void:
-	if milkies >= 10 and expies >= 10:
+	if milkies >= 50 and expies >= 50:
 		milkies -= 50
 		expies -= 50
 		auto_timer01.start()
@@ -140,7 +140,25 @@ func coop_exp_02() -> void:
 	else:
 		situation_message.text = "Not enough meat!!" 
 
-
+func coop_exp_03() -> void:
+	if milkies >= 500 and expies >= 500:
+		var roll3: float = randf()
+		if roll3 < 0.70:
+			milkies -= 300
+			expies -= 300
+			money += 250
+			_update_ui()
+		elif roll3 < 0.90:
+			milkies -= 500
+			expies -= 500
+			money += 250
+			_update_ui()
+		else:
+			milkies -= 500
+			expies -= 500
+			_update_ui()
+	else:
+		situation_message.text = "Not enough meat!!" 
 
 
 

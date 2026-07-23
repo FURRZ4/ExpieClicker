@@ -31,11 +31,13 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_glv2v")
+metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="Control" unique_id=343845521]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="CountLabel2" type="Label" parent="Control/Control" unique_id=1906086753]
 layout_mode = 0
@@ -80,10 +82,11 @@ offset_bottom = 303.0
 
 [node name="MoneyLabel" type="Label" parent="Control" unique_id=846730806]
 layout_mode = 0
-offset_left = 360.0
-offset_top = 16.0
-offset_right = 408.0
-offset_bottom = 47.0
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 112.0
+offset_bottom = 55.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ClickButton" type="Button" parent="Control" unique_id=1492706089]
 layout_mode = 0
@@ -144,22 +147,24 @@ wait_time = 0.75
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="CoopPanel" type="Button" parent="Control/Coop" unique_id=186077933]
 layout_mode = 0
 offset_left = 296.0
-offset_top = 64.0
-offset_right = 470.0
-offset_bottom = 95.0
+offset_top = 24.0
+offset_right = 472.0
+offset_bottom = 55.0
 text = "Expeditions together!"
 
 [node name="CoopContainer" type="VBoxContainer" parent="Control/Coop" unique_id=1841978492]
 visible = false
 layout_mode = 0
-offset_left = 280.0
-offset_top = 104.0
-offset_right = 482.0
-offset_bottom = 170.0
+offset_left = 304.0
+offset_top = 64.0
+offset_right = 518.0
+offset_bottom = 234.0
+scale = Vector2(0.75, 0.75)
 
 [node name="CoopExp1" type="Button" parent="Control/Coop/CoopContainer" unique_id=2016165080]
 layout_mode = 2
@@ -170,6 +175,11 @@ text = "Cooperative expedition 1:
 layout_mode = 2
 text = "Cooperative expedition 2:
 100 milkies and 100 expies"
+
+[node name="CoopExp3" type="Button" parent="Control/Coop/CoopContainer" unique_id=1446984466]
+layout_mode = 2
+text = "Cooperative expedition 3:
+500 milkies and 500 expies"
 
 [node name="ConfusedExpie" type="Sprite2D" parent="." unique_id=2041737595]
 position = Vector2(192, 420)
@@ -193,3 +203,4 @@ texture = ExtResource("3_r0du0")
 [connection signal="pressed" from="Control/Coop/CoopPanel" to="Control" method="open_coop_container"]
 [connection signal="pressed" from="Control/Coop/CoopContainer/CoopExp1" to="Control" method="coop_exp_01"]
 [connection signal="pressed" from="Control/Coop/CoopContainer/CoopExp2" to="Control" method="coop_exp_02"]
+[connection signal="pressed" from="Control/Coop/CoopContainer/CoopExp3" to="Control" method="coop_exp_03"]
